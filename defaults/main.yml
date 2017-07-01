@@ -1,0 +1,4 @@
+---
+# defaults file for MicroJoe.nginx-proxy
+
+proxy_listen: 80

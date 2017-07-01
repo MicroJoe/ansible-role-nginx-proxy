@@ -1,0 +1,10 @@
+---
+# tasks file for MicroJoe.nginx-proxy
+
+- name: Install nginx configuration file {{ proxy_filename }}
+  template:
+    src: templates/nginx-proxy.j2
+    dest: /etc/nginx/sites-available/{{ proxy_filename }}
+    owner: root
+    group: root
+  notify: restart nginx
