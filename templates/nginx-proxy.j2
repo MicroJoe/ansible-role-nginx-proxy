@@ -34,6 +34,8 @@ server {
 	{% endif %}
 	{% endif %}
 
+	{{ nginx_custom }}
+
 	location / {
 		proxy_set_header Host $proxy_host;
 		proxy_set_header X-Real-IP $remote_addr;

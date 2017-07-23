@@ -9,6 +9,8 @@ proxy_target: "http://{{ proxy_host }}:{{ proxy_port }}"
 nginx_server_name: nginx-proxy.localhost
 nginx_filename: "nginx-proxy-{{ nginx_server_name }}"
 
+nginx_custom: ""
+
 letsencrypt_wellknown: /var/www/letsencrypt
 letsencrypt_activate: false
 letsencrypt_https: false
