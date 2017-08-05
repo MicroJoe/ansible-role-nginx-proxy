@@ -10,6 +10,7 @@ nginx_server_name: nginx-proxy.localhost
 nginx_filename: "nginx-proxy-{{ nginx_server_name }}"
 
 nginx_custom: ""
+nginx_enable_http2: true
 
 letsencrypt_wellknown: /var/www/letsencrypt
 letsencrypt_activate: false

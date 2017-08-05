@@ -1,3 +1,5 @@
+{# vim: set filetype=django : #}
+
 server {
 	listen 80;
 	listen [::]:80;
@@ -18,8 +20,8 @@ server {
 }
 
 server {
-	listen 443 ssl;
-	listen [::]:443 ssl;
+	listen 443 ssl {% if nginx_enable_http2 %}http2{% endif %};
+	listen [::]:443 ssl {% if nginx_enable_http2 %}http2{% endif %};
 
 	server_name {{ nginx_server_name }};
 	access_log /var/log/nginx/{{ nginx_server_name }}.access.log;
