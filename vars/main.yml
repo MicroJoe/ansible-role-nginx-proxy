@@ -1,2 +1,3 @@
 ---
 # vars file for MicroJoe.nginx-proxy
+nginx_filename: "nginx-proxy-{{ nginx_server_name }}"
